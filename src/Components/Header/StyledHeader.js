@@ -1,12 +1,22 @@
 import styled from "styled-components";
 
-export const Titulo = styled.h1`
+
+export const Div = styled.div`
+  text-align: center;
+  
+`
+export const Img = styled.img`
+  width: 10vw;
+
+`
+export const Title = styled.h1`
   font-family: SultanNahiaW20;
-  margin: auto;
+  position: relative;
   color: white;
+ 
 `;
 export const Button = styled.button`
-  background-color: orangered;
+  background-color: red;
   border: none;
   outline: none;
   color: white;
@@ -22,15 +32,37 @@ export const Button = styled.button`
   }
   font-family: SultanNahiaW20;
   font-size: 1.2em;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5vw;
+  position: absolute;
+  top: 1;
+  left: 0;
+  @media(max-width: 540px){
+    font-size: 1.2em;
+  flex-direction: column;
+  margin-left: 0vw;
+  height: 4vh;
+  left: none;
+  top: 0;
+  }
+  
 `;
+export const Button2 = styled(Button)`
+left: 1;
+right: 0;
+margin-left: 78vw;
+@media(max-width: 540px){
+  margin-left: 65vw;
+  }
+`
 
 export const HeaderDiv = styled.div`
-  height: 50px;
+  height: 7vh;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background-color: #30a7d7;
+  @media(max-width: 540px){
+    flex-direction: column;
+    height: 10vh;
+  }
 `;

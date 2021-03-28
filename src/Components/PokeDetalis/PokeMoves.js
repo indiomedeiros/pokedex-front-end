@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import GlobalStateContext from "../../global/GlobalStateContext";
+import GlobalStateContext from "../../Global/GlobalStateContext";
 import { DivType } from "./styledDetails";
 
 export default function PokeMoves() {

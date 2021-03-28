@@ -1,6 +1,6 @@
 import { DivContainerImage, P, DivDetails } from "./styledDetails";
 import { useContext } from "react";
-import GlobalStateContext from "../../global/GlobalStateContext";
+import GlobalStateContext from "../../Global/GlobalStateContext";
 
 export default function PokeStats() {
   const states = useContext(GlobalStateContext);

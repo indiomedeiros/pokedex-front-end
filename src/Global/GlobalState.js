@@ -7,6 +7,7 @@ const GlobalState = (props) => {
   const [pokemonList, setPokemonList] = useState([]);
   const [pokedex, setPokedex] = useState([]);
   const [pokemonDetails, setPokemonDetails] = useState([]);
+  const [maxPokemons, setMaxPokemons] = useState(0);
   const states = {
     pokemonList,
     setPokemonList,
@@ -14,16 +15,20 @@ const GlobalState = (props) => {
     setPokedex,
     pokemonDetails,
     setPokemonDetails,
+    setMaxPokemons
   };
 
   useEffect(() => {
     getPokemons();
-  }, []);
+  }, [maxPokemons]);
 
   const getPokemons = () => {
     const listPokemon = [];
+    let limitPokemons = 20 + maxPokemons;
+    let offset = 21 + maxPokemons;
+    let startPokemonCount = 1 + maxPokemons;
 
-    for (let i = 1; i < 21; i++) {
+    for (let i = startPokemonCount; i < offset; i++) {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         .then((response) => {
@@ -36,7 +41,7 @@ const GlobalState = (props) => {
             sprites: response.data.sprites,
           };
 
-          if (listPokemon.length === 20) {
+          if (listPokemon.length === limitPokemons) {
             setPokemonList(listPokemon);
           }
         })
