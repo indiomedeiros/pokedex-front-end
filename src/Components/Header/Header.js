@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { HeaderDiv, Button, Titulo } from "./StyledHeader";
 import { useHistory } from "react-router-dom";
-import GlobalStateContext from "../../global/GlobalStateContext";
+import GlobalStateContext from "../../Global/GlobalStateContext";
 import { goToPageHome, goToPagePokedex } from "../../Coordination/coordination";
 
 export default function Header() {

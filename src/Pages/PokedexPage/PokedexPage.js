@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import PokeCard from "../../Components/PokeCard/PokeCard";
-import GlobalStateContext from "../../global/GlobalStateContext";
+import GlobalStateContext from "../../Global/GlobalStateContext";
 import { PokedexContainer } from "./styledPokedexPage";
 import { useHistory } from "react-router-dom";
 import { goToPageDetails } from "../../Coordination/coordination";

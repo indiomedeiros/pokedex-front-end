@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import GlobalStateContext from "../../global/GlobalStateContext";
+import GlobalStateContext from "../../Global/GlobalStateContext";
 import { useHistory } from "react-router-dom";
 import PokeCard from "../../Components/PokeCard/PokeCard";
 import { GridContainer } from "./styledHomePage";
