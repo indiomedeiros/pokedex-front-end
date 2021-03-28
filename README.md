@@ -1,5 +1,5 @@
 # POKEDEX
-Site que representa uma pokedex de pokemons, fornecendo detalhes de cada pokemon em cada página.
+Site que representa uma pokedex de pokemons, fornecendo detalhes de mais de 100 pokemons.
 
 Funcionalidades:
 - Listar porkemons

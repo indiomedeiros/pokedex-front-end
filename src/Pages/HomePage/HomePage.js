@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import GlobalStateContext from "../../Global/GlobalStateContext";
 import { useHistory } from "react-router-dom";
 import PokeCard from "../../Components/PokeCard/PokeCard";
-import { GridContainer } from "./styledHomePage";
+import { GridContainer, HomeDiv, Button  } from "./styledHomePage";
 import { goToPageDetails } from "../../Coordination/coordination";
 
 export default function Home() {
@@ -23,7 +23,16 @@ export default function Home() {
   };
 
   return (
-    <GridContainer>
+    <HomeDiv>
+      <Button  onClick = {() => states.setMaxPokemons(0)}>1</Button >
+      <Button  onClick = {() => states.setMaxPokemons(20)}>2</Button >
+      <Button  onClick = {() => states.setMaxPokemons(40)}>3</Button >
+      <Button  onClick = {() => states.setMaxPokemons(60)}>4</Button >
+      <Button  onClick = {() => states.setMaxPokemons(80)}>5</Button >
+      <Button  onClick = {() => states.setMaxPokemons(100)}>6</Button >
+
+    <GridContainer> 
+      
       {states.pokemonList &&
         states.pokemonList.map((pokemon) => {
           return (
@@ -41,5 +50,6 @@ export default function Home() {
           );
         })}
     </GridContainer>
+    </HomeDiv>
   );
 }
